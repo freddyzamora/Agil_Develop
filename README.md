@@ -16,6 +16,4 @@ EVIDENCES:
 Adicion de una nueva linea en readme
 Adicion de una nueva linea desde el computador
 
-Linea agregada por sebas desde pc<br>
-Prueba Ubuntu Juan
-Prueba Brian Villada
+
