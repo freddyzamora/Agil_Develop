@@ -5,7 +5,7 @@ Loggin
 Password
 Boton Ingreso
 Boton Borrar
-captcha-ideas Opcionales
+
 
 
 Interfaz Informacion de ventas
@@ -24,6 +24,28 @@ Fechas-hr
 Impuestos
 ID venta-#factura
 
+Interfaz Maestro Estado de Venta
+
+ID venta-#factura
+ID Cliente
+Estado ventas(Venta,Proceso, Cancelada)
+
+Interfaz Informacion de Vendedores
+
+ID ven_emp(codigo empleado)
+ID ven_persona(cedula)
+NombreVen
+ContactoVen
+Comisiones
+Region
+
+
+
+Opcionales
+
+captcha-ideas Opcionales
+Estados de Venta(Retencion, Abierta, Cerrada
+Estado de Despacho(Lista Embraque, Embarcado, Entregado)
 
 
 
