@@ -39,6 +39,17 @@ ContactoVen
 Comisiones
 Region
 
+Interfaz Usuarios y Roles
+
+ID Usuario
+Nombre y Apellido 
+NickName Usuario
+Password
+Correo electronico
+
+Rol
+Nombre Rol
+Permisos
 
 
 Opcionales
