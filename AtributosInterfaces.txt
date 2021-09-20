@@ -1,0 +1,29 @@
+Interfaz Entrada Usuario
+
+Logo
+Loggin
+Password
+Boton Ingreso
+Boton Borrar
+captcha-ideas Opcionales
+
+
+Interfaz Informacion de ventas
+
+Producto
+CantidadProd
+PrecioUN
+Total Linea
+Total Compra
+TD Cliente
+Id Cliente
+Direccion Electronica Cli
+Contacto Cli
+NombreCli
+Fechas-hr
+Impuestos
+ID venta-#factura
+
+
+
+
