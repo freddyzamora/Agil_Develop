@@ -1,0 +1,9 @@
+Titulo del Software PlanTIK
+
+Articulos Inventario
+
+Materas (Tamaño(P-M-G) - Color - Material(PLastico-Acero-Cemento-Ceramica-Barro-Vidrio))
+Abono - Fertilizantes - Triple15 - Nitrogeno - Insecticida
+Accesorios de Jardinería (Pala, tierra, tijeras, regadera, termometros)  
+
+Plantas ( Suculentas, Rosas, Orquideas, Cactus, Bambus)
