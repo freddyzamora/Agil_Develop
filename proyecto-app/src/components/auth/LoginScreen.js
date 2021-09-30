@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import './login.css';
+import { Form } from 'react-bootstrap';
 
 export const LoginScreen = () => {
     return (
         <div className="container login-container">
             <div className="row justify-content-center">
-                <div className="col-md-6 login-form">
+                <div className="col-md-3 login-form">
                     <h2>Please sign in</h2>
                     <form>
                         <div className="form-group">

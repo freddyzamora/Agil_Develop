@@ -3,6 +3,7 @@
 }
 
 .login-form{
+    
     border-radius: 50% 20% / 10% 40%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 10%;
@@ -13,15 +14,14 @@
     color: #333;
 }
 
-.btnSubmit
-{
+.btnSubmit{
     width: 100%;
     border-radius: 50% 20% / 10% 40%;
     padding: 3%;
     margin-top: 3%;
-    /* border: none; opcional*/
+    border: none;
     cursor: pointer;
     color: #fff;
-    background-color: #33aeff;
+    background-color: rgb(71, 160, 130);
 }
 
