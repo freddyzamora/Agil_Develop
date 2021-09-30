@@ -12,19 +12,19 @@ export const ProductRegistrationScreen = () => {
                         <Form>
                             <Form.Group className="mb-3" controlId="formGroupCode">
                                 <Form.Label>Codigo</Form.Label>
-                                <Form.Control type="code" placeholder="Enter code" />
+                                <Form.Control type="number" placeholder="Enter code" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formGroupName">
                                 <Form.Label>Nombre</Form.Label>
-                                <Form.Control type="name" placeholder="Enter name" />
+                                <Form.Control type="text" placeholder="Enter name" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formGroupDescription">
                                 <Form.Label>Descripción</Form.Label>
-                                <Form.Control type="description" placeholder="Description" />
+                                <Form.Control type="text" placeholder="Description" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formGroupValue">
                                 <Form.Label>Valor unitario</Form.Label>
-                                <Form.Control type="value" placeholder="Enter value" />
+                                <Form.Control type="number" placeholder="Enter value" />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label
@@ -41,10 +41,10 @@ export const ProductRegistrationScreen = () => {
                             </Form.Group>
                             <Row className="align-items-center">
                                 <Col xs="auto" className="my-1">
-                                    <Button type="submit">Borrar</Button>
+                                    <Button type="button">Borrar</Button>
                                 </Col>
                                 <Col xs="auto" className="my-1">
-                                    <Button type="submit">Ingresar</Button>
+                                    <Button type="button">Ingresar</Button>
                                 </Col>
                             </Row>
                         </Form>
