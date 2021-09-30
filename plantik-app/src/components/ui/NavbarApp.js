@@ -22,7 +22,7 @@ export const NavbarApp = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/">Login</Nav.Link>
                         <NavDropdown title="Ventas" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Registro de ventas</NavDropdown.Item>
+                            <NavDropdown.Item href="/Registro-Ventas">Registro de ventas</NavDropdown.Item>
                             <NavDropdown.Item href="/Gestion-ventas">Gestion de ventas</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Productos" id="collasible-nav-dropdown">
