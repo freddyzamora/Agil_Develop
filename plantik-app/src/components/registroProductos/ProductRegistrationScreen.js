@@ -6,34 +6,82 @@ export const ProductRegistrationScreen = () => {
     return (
         <>
             <Container className="product-container">
+                <Row className="justify-content-md-center">
+                    <Col xs={5} className="regVentas-form">
+                        <h2>Product registration</h2>
+                        <Form>
+                            <Form.Group className="mb-3" controlId="formGroupCode">
+                                <Form.Label>Codigo</Form.Label>
+                                <Form.Control type="code" placeholder="Enter code" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formGroupName">
+                                <Form.Label>Nombre</Form.Label>
+                                <Form.Control type="name" placeholder="Enter name" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formGroupDescription">
+                                <Form.Label>Descripción</Form.Label>
+                                <Form.Control type="description" placeholder="Description" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formGroupValue">
+                                <Form.Label>Valor unitario</Form.Label>
+                                <Form.Control type="value" placeholder="Enter value" />
+                            </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label
+                                    className="me-sm-2"
+                                    htmlFor="inlineFormCustomSelect"
+                                >
+                                    Estado
+                                </Form.Label>
+                                <Form.Select className="me-sm-2" id="inlineFormCustomSelect">
+                                    <option value="0">Disabled select menu</option>
+                                    <option value="1">Disponible</option>
+                                    <option value="2">No disponible</option>
+                                </Form.Select>
+                            </Form.Group>
+                            <Row className="align-items-center">
+                                <Col xs="auto" className="my-1">
+                                    <Button type="submit">Borrar</Button>
+                                </Col>
+                                <Col xs="auto" className="my-1">
+                                    <Button type="submit">Ingresar</Button>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </Col>
+                </Row>   
+            </Container>
+            {/* <Container className="product-container">
                 <Row  className="justify-content-md-center">
                     <Col xs={8}>
                         <Form>
                             <fieldset disabled>
                                 <Form.Group className="mb-3">
-                                <Form.Label htmlFor="disabledTextInput">Disabled input</Form.Label>
-                                <Form.Control id="disabledTextInput" placeholder="Disabled input" />
+                                    <Form.Label htmlFor="inputValor">
+                                        Valor unitario 
+                                    </Form.Label>
+                                    <Form.Control id="inputValor" placeholder="Valor" />
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                <Form.Label htmlFor="disabledSelect">Estado</Form.Label>
-                                <Form.Select  defaultValue="Seleccione estado">
-                                    <option>Disponible</option>
-                                    <option>No disponible</option>
-                                </Form.Select>
+                                    <Form.Label htmlFor="disabledSelect">Estado</Form.Label>
+                                    <Form.Select id="inlineFormCustomSelect">
+                                        <option value="0">Default select</option>
+                                        <option value="1">otro</option>
+                                    </Form.Select>
                                 </Form.Group>
                                 <Form.Group className="mb-3">
-                                <Form.Check
-                                    type="checkbox"
-                                    id="disabledFieldsetCheck"
-                                    label="Can't check this"
-                                />
+                                    <Form.Check
+                                        type="checkbox"
+                                        id="disabledFieldsetCheck"
+                                        label="Can't check this"
+                                    />
                                 </Form.Group>
                                 <Button type="submit">Submit</Button>
                             </fieldset>
                         </Form>
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
             
         </>
     )
