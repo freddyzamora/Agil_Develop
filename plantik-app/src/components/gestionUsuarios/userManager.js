@@ -10,9 +10,9 @@ export const UserManager = () => {
                     <Col xs={5} className="regVentas-form">
                         <h2>Gestion de Usuarios</h2>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formGroupCode">
-                                <Form.Label>Codigo</Form.Label>
-                                <Form.Control type="number" placeholder="Ingrese el código" id="fc_usua_codigo"/>
+                            <Form.Group className="mb-3" controlId="formGroupValue">
+                                <Form.Label>NickName (Nombre Usuario)</Form.Label>
+                                <Form.Control type="text" placeholder="Ingrese el Usuario" id="fc_usua_nickname"/>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formGroupName">
                                 <Form.Label>Nombres</Form.Label>
@@ -22,10 +22,7 @@ export const UserManager = () => {
                                 <Form.Label>Apellidos</Form.Label>
                                 <Form.Control type="text" placeholder="Ingrese los apellidos" id="fc_usua_apellidos"/>
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formGroupValue">
-                                <Form.Label>NickName (Nombre Usuario)</Form.Label>
-                                <Form.Control type="text" placeholder="Ingrese el Usuario" id="fc_usua_nickname"/>
-                            </Form.Group>
+
                             <Form.Group className="mb-3" controlId="formGroupValue">
                                 <Form.Label>Fecha Ingreso</Form.Label>
                                 <Form.Control type="date" placeholder="Ingrese la fecha de ingreso" id="fc_usua_fechaingreso"/>
