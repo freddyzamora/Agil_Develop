@@ -9,6 +9,7 @@ import { LoginScreen } from '../components/auth/LoginScreen';
 import { SaleManagementScreen } from '../components/gestionVentas/SaleManagementScreen';
 import { ProductRegistrationScreen } from '../components/registroProductos/ProductRegistrationScreen';
 import { RegistroVentas } from '../components/registroVentas/RegistroVentas'; 
+import { MasterProducts } from '../components/maestroProductos/MasterProducts';
 
 export const AppRouter = () => {
     return (
@@ -21,6 +22,7 @@ export const AppRouter = () => {
                 <Route exact path="/Registro-Productos" component={ ProductRegistrationScreen } />
                 <Route exact path="/Gestion-Ventas" component={ SaleManagementScreen } />
                 <Route exact path="/Registro-Ventas" component={ RegistroVentas } />
+                <Route exact path="/Maestro-Productos" component={ MasterProducts }/>
                 {/* redireccionar si la ruta no es correcta a la raiz */}
                 <Redirect to="/" />
             </Switch>
