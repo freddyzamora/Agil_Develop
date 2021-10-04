@@ -29,6 +29,9 @@ export const NavbarApp = () => {
                             <NavDropdown.Item href="/Registro-Productos">Registro de productos</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Gestion de Productos</NavDropdown.Item>
                         </NavDropdown>
+                        <NavDropdown title="Usuarios" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="/Gestion-Usuarios">Gestion de Usuarios</NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
                 </Container>
