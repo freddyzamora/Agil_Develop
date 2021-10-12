@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
+import logo from '../../assets/logo.png';
 
 
 export const NavbarApp = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                 <Navbar.Brand href="/">
                         <img
                         alt=""
-                        src="/logo.svg"
+                        src={logo}
                         width="30"
                         height="30"
                         className="d-inline-block align-top"

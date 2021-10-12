@@ -25,7 +25,7 @@ export const LoginScreen = () => {
                             <Form.Control type="password" placeholder="Password" />
                         </Form.Group>
                         
-                        <Button className="btnSubmit" variant="primary" type="submit">
+                        <Button className="btnSubmit" variant="light" type="submit">
                             Submit
                         </Button>
                     </Form>
