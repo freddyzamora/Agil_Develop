@@ -10,6 +10,7 @@ import { SaleManagementScreen } from '../components/gestionVentas/SaleManagement
 import { ProductRegistrationScreen } from '../components/registroProductos/ProductRegistrationScreen';
 import { RegistroVentas } from '../components/registroVentas/RegistroVentas'; 
 import { MasterProducts } from '../components/maestroProductos/MasterProducts';
+import { HomeScreen } from '../components/home/HomeScreen';
 
 export const AppRouter = () => {
     return (
@@ -19,6 +20,7 @@ export const AppRouter = () => {
                 renders the first one that matches the current URL. */}
             <Switch>
                 <Route exact path="/" component={ LoginScreen } />
+                <Route exact path="/Home" component={ HomeScreen } />
                 <Route exact path="/Registro-Productos" component={ ProductRegistrationScreen } />
                 <Route exact path="/Gestion-Ventas" component={ SaleManagementScreen } />
                 <Route exact path="/Registro-Ventas" component={ RegistroVentas } />

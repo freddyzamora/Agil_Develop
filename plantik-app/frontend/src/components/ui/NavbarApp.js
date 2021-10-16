@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Button} from "react-bootstrap";
 import logo from '../../assets/logo.png';
 
 
@@ -21,7 +21,7 @@ export const NavbarApp = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Login</Nav.Link>
+                        <Nav.Link href="/Home">Home</Nav.Link>
                         <NavDropdown title="Ventas" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/Registro-Ventas">Registro de ventas</NavDropdown.Item>
                             <NavDropdown.Item href="/Gestion-ventas">Gestion de ventas</NavDropdown.Item>
@@ -32,7 +32,12 @@ export const NavbarApp = () => {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
+                <Button variant="outline-danger">
+                    <i className="fas fa-sign-out-alt"></i>
+                    <span> Logout</span>
+                </Button>
                 </Container>
+                
             </Navbar>
         </>
     )
