@@ -1,2 +1,0 @@
-// routes de registro ventas
-

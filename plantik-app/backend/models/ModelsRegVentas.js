@@ -1,1 +1,0 @@
-// model de registro ventas
