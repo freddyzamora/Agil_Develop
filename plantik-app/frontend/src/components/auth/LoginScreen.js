@@ -4,23 +4,24 @@ import { useDispatch, useSelector } from "react-redux";
 import "./login.css";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useForm } from "../../hooks/useForm";
-import { login } from "../../actions/auth";
+import { startLogin } from "../../actions/auth";
 
 import GoogleLogin from "react-google-login";
 
 export const LoginScreen = () => {
   const dispatch = useDispatch();
 
-  const [formValues, handleInputChange] = useForm({
-    email: "nando@gmail.com",
-    password: "123456",
+  const [formLoginValues, handleLoginInputChange] = useForm({
+    lEmail: "nando@gmail.com",
+    lPassword: "123456",
   });
 
-  const { email, password } = formValues;
+  const { lEmail, lPassword } = formLoginValues;
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(login(12345, "hernando"));
+    //console.log(formLoginValues)
+    dispatch(startLogin(lEmail, lPassword));
     // dispatch( startLoginEmailPassword( email, password ) );
   };
 
@@ -39,9 +40,9 @@ export const LoginScreen = () => {
               <Form.Control
                 type="email"
                 placeholder="Enter email"
-                name="email"
-                value={email}
-                onChange={handleInputChange}
+                name="lEmail"
+                value={lEmail}
+                onChange={handleLoginInputChange}
               />
             </Form.Group>
 
@@ -50,9 +51,9 @@ export const LoginScreen = () => {
               <Form.Control
                 type="password"
                 placeholder="Password"
-                name="password"
-                value={password}
-                onChange={handleInputChange}
+                name="lPassword"
+                value={lPassword}
+                onChange={handleLoginInputChange}
               />
             </Form.Group>
 
