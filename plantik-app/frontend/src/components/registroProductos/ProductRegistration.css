@@ -6,3 +6,12 @@
     text-align: center;
     color: #333;
 }
+
+.btnRegistro{
+    background: #80ED99 !important;
+    width: 40%;
+    margin-top: 3%;
+    border-color: #80ED99 !important;
+    border-radius: 50% 20% / 10% 40%  !important;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}

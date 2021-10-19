@@ -3,8 +3,6 @@ require('dotenv').config();
 const { dbConnection } = require('./db/config');
 const cors = require('cors');
 
-
-
 //Crear el servidor de express
 const app = express();
 
@@ -22,6 +20,8 @@ app.use( express.json() );
 
 // Rutas
 app.use('/api/auth', require('./routes/auth') );
+//me genera un error
+//app.use('/api/products', require('./routes/products'));
 
 //escuchar peticiones
 app.listen(  process.env.PORT , () => {
