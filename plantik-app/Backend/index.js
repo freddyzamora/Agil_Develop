@@ -3,6 +3,9 @@ require('dotenv').config();
 const { dbConnection } = require('./db/config');
 const cors = require('cors');
 
+//importacion Freddy
+const usersRoutes = require("./routes/RoutersUsuarios");
+
 //Crear el servidor de express
 const app = express();
 
@@ -22,6 +25,10 @@ app.use( express.json() );
 app.use('/api/auth', require('./routes/auth') );
 
 app.use('/api/events', require('./routes/events') );
+
+//Ruta Freddy
+
+app.use("/usuarios", usersRoutes);
 
 //escuchar peticiones
 app.listen(  process.env.PORT , () => {
