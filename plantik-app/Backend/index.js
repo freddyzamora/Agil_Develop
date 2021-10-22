@@ -6,6 +6,10 @@ const cors = require('cors');
 //importacion Freddy
 const usersRoutes = require("./routes/RoutersUsuarios");
 
+//importacion Sebas
+const routeRegistroVentas = require("./routes/RoutesRegVentas");
+
+
 //Crear el servidor de express
 const app = express();
 
@@ -29,6 +33,10 @@ app.use('/api/events', require('./routes/events') );
 //Ruta Freddy
 
 app.use("/usuarios", usersRoutes);
+
+//Ruta Sebas
+
+app.use("/api", routeRegistroVentas);
 
 //escuchar peticiones
 app.listen(  process.env.PORT , () => {
