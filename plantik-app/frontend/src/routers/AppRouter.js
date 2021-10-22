@@ -17,8 +17,12 @@ import { useEffect } from "react";
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
 
-export const AppRouter = () => {
+//Importaciones Freddy
+import { UserManager} from '../components/gestionUsuarios/userManager';
+import { UserList } from "../components/gestionUsuarios/userList";
 
+export const AppRouter = () => {
+  //Router Juan
   const dispatch = useDispatch();
 
   const { checking, uid } = useSelector((state) => state.auth);
@@ -46,9 +50,9 @@ export const AppRouter = () => {
             isAuthenticated={!!uid}
           />
           <PrivateRoute
-            exact 
+            exact
             path="/"
-            component={HomeScreen} 
+            component={HomeScreen}
             isAuthenticated={!!uid}
           />
           <PrivateRoute
@@ -58,7 +62,6 @@ export const AppRouter = () => {
             isAuthenticated={!!uid}
           />
 
-          
           <Route
             exact
             path="/Gestion-Ventas"
@@ -66,6 +69,18 @@ export const AppRouter = () => {
           />
           <Route exact path="/Registro-Ventas" component={RegistroVentas} />
           <Route exact path="/Maestro-Productos" component={MasterProducts} />
+
+          {/* Rutas Freddy */}
+
+          <Route
+            exact
+            path="/GestionUsuarios/:userId"
+            component={UserManager}
+          />
+          <Route path="/UserList" exact component={UserList}/>
+            
+          
+
           {/* redireccionar si la ruta no es correcta a la raiz */}
           <Redirect to="/" />
         </Switch>
