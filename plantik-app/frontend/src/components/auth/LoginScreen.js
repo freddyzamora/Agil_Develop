@@ -1,19 +1,23 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "./login.css";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useForm } from "../../hooks/useForm";
 import { startLogin } from "../../actions/auth";
 
+//Google
 import GoogleLogin from "react-google-login";
+import { AUTH } from "../../types/types";
+import { useHistory } from 'react-router-dom';
+
 
 export const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const [formLoginValues, handleLoginInputChange] = useForm({
-    lEmail: "juan@gmail.com",
-    lPassword: "123456",
+    lEmail: "",
+    lPassword: "",
   });
 
   const { lEmail, lPassword } = formLoginValues;
@@ -24,20 +28,32 @@ export const LoginScreen = () => {
     dispatch(startLogin(lEmail, lPassword));
   };
 
-  const googleSuccess = (res) => {
-    console.log(res);
+  //Google
+
+  const history = useHistory();
+
+  const googleSuccess = async (res) => {
+    const result = res?.profileObj;
+    const token = res?.tokenId;
+
+    try {
+      dispatch({ type: AUTH, data: { result, token } });
+
+      history.push("/");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const googleFailure = (res) => {
-    console.log('Google Sign In was unsuccessful. Try Again Later');
-  };
+  const googleError = () =>
+    console.log("Google Sign In was unsuccessful. Try again later");
 
   return (
     <Container className="login-container">
       <Row className="justify-content-md-center">
         <Col xs={4} className="login-form">
           <h2>Please sign in</h2>
-          <br/>
+          <br />
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -64,18 +80,35 @@ export const LoginScreen = () => {
             <Button className="btnSubmit" variant="light" type="submit">
               Submit
             </Button>
-            <br/>
-            <br/>
+           
+            <br />
             <h2>or</h2>
             
             <GoogleLogin
+              clientId="589881790796-es5gqoj2c6p46t5itbjuuho926ppf8bn.apps.googleusercontent.com"
+              render={(renderProps) => (
+                <Button
+                  className="btnSubmit-1"
+                  color="primary"
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                  variant="contained"
+                >
+                  Google Sign In
+                </Button>
+              )}
+              onSuccess={googleSuccess}
+              onFailure={googleError}
+              cookiePolicy="single_host_origin"
+            />
+            {/* <GoogleLogin
               className="btnSubmit-1"
               clientId="589881790796-es5gqoj2c6p46t5itbjuuho926ppf8bn.apps.googleusercontent.com"
               buttonText="Login in with Google"
               onSuccess={googleSuccess}
-              onFailure={googleFailure}
+              onFailure={googleError}
               cookiePolicy={"single_host_origin"}
-            />
+            /> */}
           </Form>
         </Col>
       </Row>

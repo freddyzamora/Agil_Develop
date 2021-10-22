@@ -1,4 +1,5 @@
 import { types } from "../types/types";
+import { AUTH, LOGOUT } from "../types/types";
 
 const initialState = {
   checking: true,
@@ -23,8 +24,13 @@ export const authReducer = (state = initialState, action) => {
 
     case types.authLogout:
       return {
-        checking: false
+        checking: false,
       };
+
+    case AUTH:
+      // console.log(action?.data);
+      localStorage.setItem('profile', JSON.stringify({...action?.data}))
+      return {...state, authData: action?.data};
 
     default:
       return state;

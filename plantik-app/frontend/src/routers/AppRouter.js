@@ -45,17 +45,20 @@ export const AppRouter = () => {
             component={LoginScreen}
             isAuthenticated={!!uid}
           />
-          <PrivateRoute 
+          <PrivateRoute
             exact 
             path="/"
             component={HomeScreen} 
             isAuthenticated={!!uid}
           />
-          <Route
+          <PrivateRoute
             exact
             path="/Registro-Productos"
             component={ProductRegistrationScreen}
+            isAuthenticated={!!uid}
           />
+
+          
           <Route
             exact
             path="/Gestion-Ventas"

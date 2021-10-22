@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./ProductRegistration.css";
 import { NavbarApp } from "../ui/NavbarApp";
-import { Form, Button, Container, Row, Col, FormCheck } from "react-bootstrap";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import {eventStartAddNew} from '../../actions/events';
+import { useDispatch } from "react-redux";
 
 export const ProductRegistrationScreen = () => {
+
+  const dispatch = useDispatch();
 
   const [formValues, setFormValues] = useState({
     codigo: 0,
@@ -11,7 +15,7 @@ export const ProductRegistrationScreen = () => {
     descripcion: '',
     valor: 0,
     imagen: '',
-    disponible: false,
+    disponible: '',
   })
 
   const {codigo, nombre, descripcion, valor, imagen, disponible} = formValues;
@@ -27,7 +31,7 @@ export const ProductRegistrationScreen = () => {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    console.log(formValues);
+    dispatch(eventStartAddNew(formValues));
   }
 
   return (
@@ -91,16 +95,15 @@ export const ProductRegistrationScreen = () => {
                 onChange={ handleInputChange }
                 />
               </Form.Group>
-              <Form.Group className="mb-3">
-                <FormCheck
-                  className="float-end"
-                  type="checkbox"
-                  id="default-checkbox"
-                  label="Disponible"
-                  name="disponible"
+              <Form.Group className="mb-3" controlId="formGroupDescription">
+                <Form.Label>Estado</Form.Label>
+                <Form.Control 
+                  type="text"
+                  name="disponible" 
+                  placeholder="Estado" 
                   value={disponible}
                   onChange={ handleInputChange }
-                />
+                  />
               </Form.Group>
               <br/>
               {/* <Button 
