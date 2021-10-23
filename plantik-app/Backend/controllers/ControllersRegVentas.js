@@ -42,10 +42,14 @@ exports.addFacVenta = (req,res) => {
         Precio_total: req.body.Precio_total
     })
     console.log(NewFac);
-    NewFac.save().then((FacVen)=>{
+    ModelFacVenta.insertMany(req.body).then((FacVen)=>{
+        console.log(FacVen);
+        res.status(201).json("Factura de Venta adicionada");
+    })
+    /* NewFac.save().then((FacVen)=>{
         console.log(FacVen);
         res.status(201).json("LO logramos -Factura de Venta adicionada");
-    })
+    }) */
 }
 // otras adiconales
 exports.buscarcliente = (req,res) =>{
