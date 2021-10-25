@@ -1,4 +1,5 @@
 import React , { useState } from "react";
+import { NavbarApp } from "../ui/NavbarApp";
 import { useEffect } from "react";
 import {Row,  Col,  Container,  Table,  Form,  Button,  Placeholder,} from "react-bootstrap";
 import Swal from 'sweetalert2';
@@ -136,6 +137,8 @@ useEffect(() => {
         } );
       }; 
   return (
+    <>
+    <NavbarApp />
     <Container>
       {/*Titulo*/}
       <Row className="mb-3">
@@ -368,5 +371,6 @@ useEffect(() => {
         </Col> }
       </Row>
     </Container>
+</>
   );
 };
