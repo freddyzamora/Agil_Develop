@@ -1,10 +1,12 @@
 import React from 'react'
+import { NavbarApp } from "../ui/NavbarApp";
 import './MasterProducts.css'
 import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap'
 
 export const MasterProducts = () => {
   return (
     <>
+    <NavbarApp />
       <Container className="product-container">
         <Row className="justify-content-md-center">
           <Col xs={7} className="form-MasterProducts">
