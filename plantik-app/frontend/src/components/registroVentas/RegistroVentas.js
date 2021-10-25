@@ -55,7 +55,7 @@ const changeinputcant = (event)=> {
 const [listvendedores,setListvendedores]= useState([]);
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3002/api/Vendedores");
+    const response = await fetch("http://localhost:4000/api/Vendedores");
     const data = await response.json();
     setListvendedores(data);
   };
@@ -65,7 +65,7 @@ useEffect(() => {
 const [listClientes,setListClientes]= useState([]);
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3002/api/Clientes");
+    const response = await fetch("http://localhost:4000/api/Clientes");
     const data = await response.json();
     setListClientes(data);
   };
@@ -75,7 +75,7 @@ useEffect(() => {
 const [listventas,setListventas]= useState([{"ID_Venta":-1}]);
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3002/api/FacVenta");
+    const response = await fetch("http://localhost:4000/api/FacVenta");
     const data = await response.json();
     setListventas(data);
   };
@@ -85,7 +85,7 @@ useEffect(() => {
 const [listproductos,setListproductos]= useState([]);
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3002/api/Producto");
+    const response = await fetch("http://localhost:4000/api/Producto");
     const data = await response.json();
     setListproductos(data);
   };
@@ -117,7 +117,7 @@ useEffect(() => {
 
   const post_registroVenta = async ()=>{  
     const response = await fetch(
-      "http://localhost:3002/api/FacVenta",{
+      "http://localhost:4000/api/FacVenta",{
       method: "POST",
       body: JSON.stringify(venta),
       headers:{
