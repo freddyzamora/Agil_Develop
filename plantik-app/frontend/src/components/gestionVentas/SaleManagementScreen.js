@@ -1,4 +1,5 @@
 import React,  { useState }  from 'react';
+import { NavbarApp } from "../ui/NavbarApp";
 import './SalesStatus.css';
 import { useEffect } from "react";
 import {Row,  Col,  Container,  Table,  Form,  Button,  Placeholder,} from "react-bootstrap";
@@ -76,6 +77,7 @@ const Buscarventas = ()=>{
 
   return (
         <>
+      <NavbarApp />
   <Container className="sales-container">
     <Row className="justify-content-md-center">
         <Col xl={15} className="estadoVentas-form">
