@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavbarApp } from "../ui/NavbarApp";
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import './userManager.css';
@@ -57,6 +58,7 @@ export const UserManager = (formUser) => {
     
     return (
         <>
+        <NavbarApp />
             <Container className="product-container">
                 <Row className="justify-content-md-center">
                     <Col xs={5} className="regVentas-form">
