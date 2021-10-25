@@ -1,4 +1,5 @@
 import Table from "react-bootstrap/Table";
+import { NavbarApp } from "../ui/NavbarApp";
 import { Link } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import "./userList.css";
@@ -23,6 +24,7 @@ export const UserList = () => {
 
   return (
     <div>
+      <NavbarApp />
       <h1 className="text-center mt-5 mb-5">LISTA USUARIOS</h1>
       <Container>
         <Table striped bordered hover>

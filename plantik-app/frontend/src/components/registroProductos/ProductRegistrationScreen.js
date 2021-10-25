@@ -4,6 +4,7 @@ import { NavbarApp } from "../ui/NavbarApp";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import {eventStartAddNew} from '../../actions/events';
 import { useDispatch } from "react-redux";
+import Swal from 'sweetalert2';
 
 export const ProductRegistrationScreen = () => {
 
@@ -32,6 +33,14 @@ export const ProductRegistrationScreen = () => {
   const handleSubmitForm = (e) => {
     e.preventDefault();
     dispatch(eventStartAddNew(formValues));
+    Swal.fire({
+      title: 'Registro Exitoso!',
+      text: " ",
+      icon: 'success',
+      confirmButtonText: "Home",
+    }).then(function() {
+        window.location = "/Gestion";
+    } );
   }
 
   return (

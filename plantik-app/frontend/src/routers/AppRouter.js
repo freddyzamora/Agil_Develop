@@ -62,22 +62,24 @@ export const AppRouter = () => {
             isAuthenticated={!!uid}
           />
 
-          <Route
+          <PrivateRoute
             exact
             path="/Gestion-Ventas"
             component={SaleManagementScreen}
+            isAuthenticated={!!uid}
           />
-          <Route exact path="/Registro-Ventas" component={RegistroVentas} />
-          <Route exact path="/Maestro-Productos" component={MasterProducts} />
+          <PrivateRoute exact path="/Registro-Ventas" component={RegistroVentas} isAuthenticated={!!uid} />
+          <PrivateRoute exact path="/Maestro-Productos" component={MasterProducts} isAuthenticated={!!uid}/>
 
           {/* Rutas Freddy */}
 
-          <Route
+          <PrivateRoute
             exact
             path="/GestionUsuarios/:userId"
             component={UserManager}
+            isAuthenticated={!!uid}
           />
-          <Route path="/UserList" exact component={UserList}/>
+          <PrivateRoute path="/UserList" exact component={UserList} isAuthenticated={!!uid}/>
             
           
 
