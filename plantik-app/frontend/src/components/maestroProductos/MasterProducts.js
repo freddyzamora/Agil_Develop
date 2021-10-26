@@ -16,7 +16,7 @@ export const MasterProducts = () => {
   const [listproductos, setListproductos] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:4000/api/Producto");
+      const response = await fetch("https://warm-dusk-23117.herokuapp.com/api/Producto");
       const data = await response.json();
       setListproductos(data);
     };
