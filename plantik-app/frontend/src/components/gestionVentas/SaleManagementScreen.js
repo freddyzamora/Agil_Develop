@@ -22,7 +22,7 @@ export const SaleManagementScreen = () => {
      const [listClientes,setListClientes]= useState([]);
       useEffect(() => {
         const fetchData = async () => {
-         const response = await fetch("http://localhost:4000/api/Clientes");
+         const response = await fetch("https://warm-dusk-23117.herokuapp.com/api/Clientes");
         const data = await response.json();
         setListClientes(data);
         };
@@ -33,7 +33,7 @@ export const SaleManagementScreen = () => {
 const [listaventa , setlistVenta]= useState([]);
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch("http://localhost:4000/api/FacVenta");
+    const response = await fetch("https://warm-dusk-23117.herokuapp.com/api/FacVenta");
     const data = await response.json();
     setlistVenta(data);
   };
