@@ -4,7 +4,7 @@ const callApi = async (url, options = {}) => {
       Accept: "application/json",
     };
     
-    const urlString = "http://localhost:4000" + url;
+    const urlString = "https://warm-dusk-23117.herokuapp.com" + url;
     const response = await fetch(urlString, options);
     const data = await response.json();
 
