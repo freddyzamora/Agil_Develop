@@ -230,7 +230,7 @@ useEffect(() => {
             <Form.Select aria-label="Default select example" name="Vendedor" onChange={cambiovendedor}>
               <option >Seleccione Vendedor</option>
               {listvendedores.map((vend)=>(
-              <option key={vend.Nombres} value={vend.Nombres}>{vend.Nombres}</option>
+              <option key={vend.Nombres} value={vend.Nombres}>{vend.Nombres+" "+vend.Apellidos}</option>
               ))}            
             </Form.Select>
           </Col>
